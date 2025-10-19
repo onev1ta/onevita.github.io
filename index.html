@@ -1,47 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VITA | Streetwear & Art</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITA | Streetwear for Creators</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: #fafafa; color: #111; }
-    header { text-align: center; padding: 60px 20px; background: black; color: white; }
-    h1 { font-size: 2.5em; letter-spacing: 3px; }
-    p { max-width: 600px; margin: 0 auto; line-height: 1.5; }
-    .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
-    .product { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 250px; text-align: center; padding: 20px; }
-    img { width: 100%; border-radius: 10px; }
-    button { background: black; color: white; border: none; padding: 10px 20px; border-radius: 8px; margin-top: 10px; cursor: pointer; }
-    button:hover { background: #333; }
-    footer { text-align: center; padding: 30px; background: #111; color: white; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6e6e6;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    /* Intro animation */
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #e6e6e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 100;
+      animation: fadeOut 1s ease 2.5s forwards;
+    }
+
+    .intro h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 5rem;
+      letter-spacing: 4px;
+      color: #111;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    /* Main content */
+    main {
+      text-align: center;
+      padding: 100px 20px;
+      opacity: 0;
+      animation: appear 1s ease 3s forwards;
+    }
+
+    @keyframes appear {
+      to { opacity: 1; }
+    }
+
+    header {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #111;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-top: 40px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #444;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body>
-  <header>
-    <h1>VITA</h1>
-    <p>Streetwear and art — made for creators and dreamers.</p>
-  </header>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/250x250?text=VITA+Hoodie" alt="VITA Hoodie">
-      <h3>VITA Hoodie</h3>
-      <p>$60</p>
-      <!-- PayPal Buy Now Button -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="VTUFF7@outlook.com">
-        <input type="hidden" name="item_name" value="VITA Hoodie">
-        <input type="hidden" name="amount" value="60.00">
-        <input type="hidden" name="currency_code" value="USD">
-        <button type="submit">Buy Now</button>
-      </form>
-    </div>
-  </section>
+<body>
+  <!-- Intro Animation -->
+  <div class="intro">
+    <h1>VITA</h1>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <header>
+      <h2>Streetwear for Creators & Dreamers</h2>
+    </header>
+
+    <p>VITA is a creative movement built for those who live art, chase meaning, and design their own path. 
+       Every drop reflects life — raw, real, and evolving.</p>
+
+    <a href="#" class="btn">Shop Collection</a>
+  </main>
 
   <footer>
-    <p>© 2025 VITA. All rights reserved.</p>
+    <p>© 2025 VITA | All rights reserved | Contact: 
+      <a href="mailto:VTUFF7@outlook.com">VTUFF7@outlook.com</a>
+    </p>
   </footer>
 </body>
 </html>
