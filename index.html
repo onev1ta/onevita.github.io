@@ -4,36 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VITA | Streetwear for Creators</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #e6e6e6;
       color: #111;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
-    /* Intro animation */
+    /* Intro Animation */
     .intro {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background-color: #e6e6e6;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
       z-index: 100;
       animation: fadeOut 1s ease 2.5s forwards;
     }
@@ -41,171 +30,83 @@
     .intro h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 6rem;
-      letter-spacing: 5px;
-      color: #c20808; /* Red graffiti color */
+      color: #c20808;
+      letter-spacing: 6px;
       opacity: 0;
-      animation: fadeIn 1s ease forwards;
+      animation: fadeIn 1.2s ease forwards;
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1); }
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @keyframes fadeOut {
       to { opacity: 0; visibility: hidden; }
     }
 
-    /* Main content */
+    /* Main Content */
     main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 100px 20px;
       opacity: 0;
       animation: appear 1s ease 3s forwards;
     }
 
-    @keyframes appear {
-      to { opacity: 1; }
-    }
-
-    header {
-      font-size: 1.2rem;
-      margin-bottom: 50px;
-    }
+    @keyframes appear { to { opacity: 1; } }
 
     h2 {
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    p {
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 20px;
       color: #333;
-      line-height: 1.6;
     }
 
     .btn {
       display: inline-block;
-      background-color: #111;
+      padding: 14px 36px;
+      background: #111;
       color: #fff;
-      text-decoration: none;
-      padding: 12px 30px;
       border-radius: 30px;
-      text-transform: uppercase;
+      font-weight: 600;
       letter-spacing: 2px;
-      font-weight: bold;
-      margin-top: 40px;
-      transition: 0.3s;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #444;
+      background: #c20808;
       transform: scale(1.05);
     }
 
-    /* Product grid */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      padding: 80px 20px;
-      opacity: 0;
-      animation: appear 1s ease 3.5s forwards;
-    }
-
-    .product {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      transition: 0.3s;
-    }
-
-    .product:hover {
-      transform: scale(1.02);
-    }
-
-    .product img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .product h3 {
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .product p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
     footer {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
       text-align: center;
-      padding: 40px 0;
-      color: #777;
       font-size: 0.9rem;
-      border-top: 1px solid #ccc;
-      margin-top: 60px;
-    }
-
-    footer a {
-      color: #111;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
-  <!-- Intro Animation -->
   <div class="intro">
     <h1>VITA</h1>
   </div>
 
-  <!-- Main Content -->
   <main>
-    <header>
-      <h2>Streetwear for Creators & Dreamers</h2>
-    </header>
-
-    <p>VITA is a creative movement built for those who live art, chase meaning, and design their own path. 
-       Every drop reflects life — raw, real, and evolving.</p>
-
-    <a href="#products" class="btn">Explore Collection</a>
+    <h2>Streetwear for Creators & Dreamers</h2>
+    <a href="drop.html" class="btn">Enter Drop</a>
   </main>
 
-  <!-- Product Section -->
-  <section id="products" class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/400x400.png?text=Hoodie+Drop" alt="VITA Hoodie">
-      <h3>VITA Hoodie (Fall '25 Drop)</h3>
-      <p>Soft heavyweight cotton. Minimal front, artistic back. Designed for creators who move with purpose.</p>
-    </div>
-
-    <div class="product">
-      <img src="https://via.placeholder.com/400x400.png?text=Tee+Drop" alt="VITA Tee">
-      <h3>VITA Essentials Tee</h3>
-      <p>Everyday piece, relaxed fit, 100% cotton. Simple, clean, and powerful — the base of your look.</p>
-    </div>
-
-    <div class="product">
-      <img src="https://via.placeholder.com/400x400.png?text=Crewneck+Drop" alt="VITA Crewneck">
-      <h3>VITA Crewneck</h3>
-      <p>Built for comfort. Oversized feel with subtle design. A future classic from the next era of VITA.</p>
-    </div>
-  </section>
-
   <footer>
-    <p>© 2025 VITA | All rights reserved | Contact: 
-      <a href="mailto:VTUFF7@outlook.com">VTUFF7@outlook.com</a>
-    </p>
+    <p>© 2025 VITA | All rights reserved</p>
   </footer>
 </body>
 </html>
