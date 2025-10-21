@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITA Drops | Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6e6e6;
+      color: #111;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 3rem;
+      color: #c20808;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #444;
+    }
+
+    .drops {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 60px 40px;
+    }
+
+    .drop-box {
+      background: white;
+      border-radius: 16px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .drop-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .drop-box h2 {
+      font-family: 'Permanent Marker', cursive;
+      color: #c20808;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .drop-box p {
+      color: #777;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 60px auto;
+      width: 200px;
+      background: #111;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      background: #c20808;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>VITA</h1>
+    <p>The Drop Zone — Coming Soon</p>
+  </header>
+
+  <section class="drops">
+    <div class="drop-box">
+      <h2>The Last Supper</h2>
+      <p>Drop Coming Soon...</p>
+    </div>
+    <div class="drop-box">
+      <h2>One Life</h2>
+      <p>Drop Coming Soon...</p>
+    </div>
+    <div class="drop-box">
+      <h2>VITA Core</h2>
+      <p>Drop Coming Soon...</p>
+    </div>
+  </section>
+
+  <a href="index.html" class="back">Back Home</a>
+
+  <footer>
+    <p>© 2025 VITA | All rights reserved | Contact: <a href="mailto:VTUFF7@outlook.com">VTUFF7@outlook.com</a></p>
+  </footer>
+</body>
+</html>
