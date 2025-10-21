@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VITA | The Drops</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6e6e6;
+      color: #111;
+    }
+
+    header { text-align: center; padding: 60px 20px; }
+    header h1 { font-family: 'Permanent Marker'; color: #c20808; font-size: 3rem; margin-bottom: 10px; }
+
+    .drops {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 60px 40px;
+    }
+
+    .drop-box {
+      background: white;
+      border-radius: 16px;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .drop-box:hover { transform: translateY(-5px); }
+    .drop-box h2 { font-family: 'Permanent Marker'; color: #c20808; margin-bottom: 10px; }
+    .drop-box a { background: #111; color: #fff; padding: 10px 25px; border-radius: 25px; text-decoration: none; text-transform: uppercase; font-weight: bold; }
+    .drop-box a:hover { background: #c20808; }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin: 60px auto;
+      width: 200px;
+      background: #111;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .back:hover { background: #c20808; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>VITA DROPS</h1>
+    <p>Explore limited collections made for creators.</p>
+  </header>
+
+  <section class="drops">
+    <div class="drop-box">
+      <h2>The Last Supper</h2>
+      <a href="last-supper.html">View Collection</a>
+    </div>
+
+    <div class="drop-box">
+      <h2>One Life</h2>
+      <a href="one-life.html">View Collection</a>
+    </div>
+
+    <div class="drop-box">
+      <h2>VITA Core</h2>
+      <a href="vita-core.html">Coming Soon</a>
+    </div>
+  </section>
+
+  <a href="index.html" class="back">Back Home</a>
+</body>
+</html>
